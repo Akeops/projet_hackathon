@@ -51,17 +51,18 @@ const { readFile } = require("node:fs/promises");
 let data;
 
 async function insertData() {
-	let tempData = await readFile("../sanisettesparis.json", {
+	let tempData = await readFile("./sanisettesparis.json", {
 		encoding: "utf8",
 	});
 	data = JSON.parse(tempData);
 	return data;
 }
 
-insertData().then(() => {
-	data.forEach((element) => {
-		console.log(element.url_fiche_equipement);
-	});
-});
+// const dataSansClesInutiles = data.map((obj) => {
+// 	const { url_fiche_equipement, geo_shape, ...data } = obj;
+// 	return data;
+// });
 
-module.exports = { createToilet, getToiletById, getAllToilets };
+// console.log(dataSansClesInutiles);
+
+module.exports = { createToilet, getToiletById, getAllToilets, insertData };
