@@ -14,14 +14,14 @@ async function getUsersById(id) {
 async function getAllUsers(criterias = {}) {
     const where = {}
     // where.alias !== undefined && (where.alias = criterias.alias);
-    if (criterias.ID_users) {
-        where.model = criterias.model;
-    }
     if (criterias.nickname) {
         where.nickname = criterias.nickname;
     }
     if (criterias.email) {
         where.email = criterias.email;
+    }
+    if (criterias.password) {
+        where.password = criterias.password;
     }
     return await User.findAll({ where });
 
