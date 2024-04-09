@@ -51,7 +51,7 @@ const { readFile } = require("node:fs/promises");
 let data;
 
 async function insertData() {
-	let tempData = await readFile("./sanisettesparis.json", {
+	let tempData = await readFile("../sanisettesparis.json", {
 		encoding: "utf8",
 	});
 	data = JSON.parse(tempData);
