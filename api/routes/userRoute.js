@@ -8,5 +8,6 @@ const userController = require("../controllers/userController");
 router.get("/", userController.getAllUsers);
 router.post("/", userController.createUser);
 
+router.post("/:id/toilet", userController.createFavorites);
 
 module.exports = router;

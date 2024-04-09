@@ -19,7 +19,11 @@ async function getUsersById(req, res) {
 async function getAllUsers(req, res) {
 	try {
 		const { nickname, email, password } = req.query;
-		const users = await userService.getAllUsers({ nickname, email, password });
+		const users = await userService.getAllUsers({
+			nickname,
+			email,
+			password,
+		});
 
 		res.json(users);
 	} catch (err) {
@@ -36,8 +40,18 @@ async function createUser(req, res) {
 	}
 }
 
+async function createFavorites(req, res) {
+	try {
+		const favorite = await userService.createFavorite(req.body);
+		res.json(favorite);
+	} catch (err) {
+		res.status(500).json({ message: err.message });
+	}
+}
+
 module.exports = {
 	getUsersById,
 	getAllUsers,
 	createUser,
+	createFavorites,
 };

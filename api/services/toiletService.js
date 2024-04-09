@@ -1,4 +1,4 @@
-const { Toilet } = require("../models/toiletModel");
+const { Toilet } = require("../models/associations");
 
 async function createToilet(player) {
 	await Toilet.create(player);
