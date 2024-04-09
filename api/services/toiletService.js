@@ -1,4 +1,3 @@
-const { log } = require("console");
 const { Toilet } = require("../models/toiletModel");
 
 async function createToilet(player) {
@@ -49,19 +48,20 @@ async function getAllToilets(criterias = {}) {
 
 const { readFile } = require("node:fs/promises");
 
+let data;
+
 async function insertData() {
-	let data = await readFile("../sanisettesparis.json", {
-		encoding: "utf-8",
+	let tempData = await readFile("./sanisettesparis.json", {
+		encoding: "utf8",
 	});
-	let toilets = JSON.parse(data);
-	console.log(toilets);
-	return toilets;
+	data = JSON.parse(tempData);
+	return data;
 }
 
-insertData();
-
-// fs.readFile("../sanisettesparis.csv", "utf8", (err, data) => {
-// 	console.log(data);
-// });
+insertData().then(() => {
+	data.forEach((element) => {
+		console.log(element.url_fiche_equipement);
+	});
+});
 
 module.exports = { createToilet, getToiletById, getAllToilets };
