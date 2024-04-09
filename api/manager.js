@@ -1,18 +1,20 @@
-const express = require("express");
 const { db } = require("./models/db");
-
-const app = express();
-const PORT = 3000;
-
+const toiletRouter = require("./routes/toiletRoute");
 const userRouter = require("./routes/userRoute");
 
+const express = require("express");
 
-app.use(express.json());
+const app = express();
+const PORT = 3001;
 
+// app.use(express.json());
 app.use("/api/v1/users", userRouter);
+
+app.use("/api/v1/toilets", toiletRouter);
 
 db.sync().then(async () => {
 	app.listen(PORT, () => {
-		console.log();
+		console.log(`Server running triple monstre`);
 	});
+
 });
