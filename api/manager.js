@@ -13,6 +13,8 @@ app.use("/api/v1/toilets", toiletRouter);
 
 db.sync().then(async () => {
 	app.listen(PORT, () => {
-		console.log(`Server running triple monstre`);
+		console.log(
+			`Serveur running, triple moooooonstre on http://localhost:${PORT}`
+		);
 	});
 });
