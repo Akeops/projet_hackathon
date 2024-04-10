@@ -1,0 +1,52 @@
+/* Style de base pour le drawer */
+.drawer-content,
+.drawer-side {
+  transition: transform 0.3s ease;
+}
+
+/* Masquer le checkbox */
+.drawer-toggle {
+  display: none;
+}
+
+/* Par défaut, le drawer est hors de l'écran */
+.drawer-side {
+  transform: translateX(100%);
+}
+
+/* Lorsque la case est cochée, déplacer le drawer pour le montrer */
+.drawer-toggle:checked + .drawer-content + .drawer-side {
+  transform: translateX(0);
+}
+
+/* Style de base pour le bouton */
+.btn-primary {
+  background-color: #3490dc;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styles pour le menu et les items */
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Fond de base et couleur de texte */
+.bg-base-200 {
+  background-color: #f9fafb;
+}
+
+.text-base-content {
+  color: #334155;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/UserComponent.css";
+import "../styles/UserComponent.css";
 
 const RegistrationForm = () => {
   return (
@@ -37,7 +37,9 @@ const RegistrationForm = () => {
 
           <div className="form-element">
             <div>
-              <label htmlFor="password" className="form-element">Mot de passe</label>
+              <label htmlFor="password" className="form-element">
+                Mot de passe
+              </label>
               <div>
                 <input
                   id="password"

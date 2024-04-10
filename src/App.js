@@ -1,12 +1,10 @@
-import React from 'react';
-import UserPage from './components/UserPage';
+import React from "react";
+import UserPage from "./components/UserPage";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        
-      </header>
+      <header></header>
       <main>
         <UserPage />
       </main>

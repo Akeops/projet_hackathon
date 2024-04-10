@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
-import '../style/map.css';  
+import "../styles/map.css";
 
-const MAPBOX_ACCESS_TOKEN = "pk.eyJ1Ijoic3lsdmFpbmdhbHRpZXIiLCJhIjoiY2tsZ3JoZ3kyMWV3OTJ3cDdrcjM0azh0eiJ9.zH81EkDqnNnXFigXe1f7PQ";
+const MAPBOX_ACCESS_TOKEN =
+  "pk.eyJ1Ijoic3lsdmFpbmdhbHRpZXIiLCJhIjoiY2tsZ3JoZ3kyMWV3OTJ3cDdrcjM0azh0eiJ9.zH81EkDqnNnXFigXe1f7PQ";
 
 class Map extends Component {
   state = {
@@ -17,7 +18,7 @@ class Map extends Component {
     const { viewport } = this.state;
 
     return (
-      <div className="map-container">  
+      <div className="map-container">
         <ReactMapGL
           {...viewport}
           mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}

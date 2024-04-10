@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/UserComponent.css";
+import "../styles/UserComponent.css";
 
 const ConnectionForm = () => {
   return (
@@ -24,9 +24,11 @@ const ConnectionForm = () => {
 
           <div className="form-element">
             <div>
-              <label htmlFor="password" className="form-element">Mot de passe</label>
+              <label htmlFor="password" className="form-element">
+                Mot de passe
+              </label>
               <div>
-                <a href="#" >Mot de Passe oublié?</a>
+                <a href="#">Mot de Passe oublié?</a>
               </div>
             </div>
             <div>
