@@ -1,4 +1,3 @@
-//const { log } = require("three/examples/jsm/nodes/Nodes.js");
 const userService = require("../services/userService");
 
 async function getUsersById(req, res) {

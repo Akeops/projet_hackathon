@@ -46,18 +46,6 @@ async function getAllToilets(criterias = {}) {
 	return await Toilet.findAll({ where });
 }
 
-const { readFile } = require("node:fs/promises");
-
-let data;
-
-async function insertData() {
-	let tempData = await readFile("./sanisettesparis.json", {
-		encoding: "utf8",
-	});
-	data = JSON.parse(tempData);
-	return data;
-}
-
 // const dataSansClesInutiles = data.map((obj) => {
 // 	const { url_fiche_equipement, geo_shape, ...data } = obj;
 // 	return data;
@@ -65,4 +53,4 @@ async function insertData() {
 
 // console.log(dataSansClesInutiles);
 
-module.exports = { createToilet, getToiletById, getAllToilets, insertData };
+module.exports = { createToilet, getToiletById, getAllToilets };
