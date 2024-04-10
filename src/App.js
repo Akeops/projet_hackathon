@@ -1,5 +1,5 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import UserPage from './components/UserPage';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         
       </header>
       <main>
-        <MapComponent />
+        <UserPage />
       </main>
     </div>
   );
