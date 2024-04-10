@@ -26,20 +26,24 @@ async function getAllUsers(criterias = {}) {
 	return await User.findAll({ where });
 }
 
-async function createFavorite({ userId, toiletsId }) {
+async function addFavoriteToUser({ userId, toiletsId }) {
 	const user = await getUsersById(userId);
-	// console.log(toiletsId);
 	return await user.addToilets(toiletsId);
 }
 
-async function createNotice(notice) {
-	return await User.addNotice(notice);
+async function addNoticeToUser({ userId, toiletsId, comment, note }) {
+	const user = await getUsersById(userId);
+	console.log(comment);
+	return await user.addNotice_relation(toiletsId, {
+		comment: comment,
+		note: note,
+	});
 }
 
 module.exports = {
 	createUser,
 	getUsersById,
 	getAllUsers,
-	createFavorite,
-	createNotice,
+	addFavoriteToUser,
+	addNoticeToUser,
 };

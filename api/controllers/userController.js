@@ -39,12 +39,11 @@ async function createUser(req, res) {
 	}
 }
 
-async function createFavorites(req, res) {
+async function addFavoriteToUser(req, res) {
 	try {
 		const userId = req.params.id;
 		const { toiletsId } = req.body;
-		console.log(toiletsId);
-		const favorite = await userService.createFavorite({
+		const favorite = await userService.addFavoriteToUser({
 			userId,
 			toiletsId,
 		});
@@ -54,9 +53,16 @@ async function createFavorites(req, res) {
 	}
 }
 
-async function createNotice(req, res) {
+async function addNoticeToUser(req, res) {
 	try {
-		const notice = await userService.createNotice(req.body);
+		const userId = req.params.id;
+		const { toiletsId, comment, note } = req.body;
+		const notice = await userService.addNoticeToUser({
+			userId,
+			toiletsId,
+			comment,
+			note,
+		});
 		res.json(notice);
 	} catch (err) {
 		res.status(500).json({ message: err.message });
@@ -67,6 +73,6 @@ module.exports = {
 	getUsersById,
 	getAllUsers,
 	createUser,
-	createFavorites,
-	createNotice,
+	addFavoriteToUser,
+	addNoticeToUser,
 };

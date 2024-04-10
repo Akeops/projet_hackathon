@@ -9,8 +9,8 @@ router.get("/", userController.getAllUsers);
 router.get("/:id", userController.getUsersById);
 router.post("/", userController.createUser);
 
-router.post("/:id/toilets", userController.createFavorites);
+router.post("/:id/toilets", userController.addFavoriteToUser);
 
-router.post("/:id/toilet/notice", userController.createNotice);
+router.post("/:id/toilets/notice", userController.addNoticeToUser);
 
 module.exports = router;
