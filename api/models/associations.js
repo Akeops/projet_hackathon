@@ -13,13 +13,13 @@ const Notice = db.define("notice", {
 		allowNull: true,
 	},
 	note: {
-		type: DataTypes.BOOLEAN,
+		type: DataTypes.NUMBER,
 		allowNull: true,
 	},
 });
 
-User.belongsToMany(Toilet, { through: Notice });
-Toilet.belongsToMany(User, { through: Notice });
+User.belongsToMany(Toilet, { through: Notice, as: "notice_relation" });
+Toilet.belongsToMany(User, { through: Notice, as: "notice_relation" });
 
 User.belongsToMany(Toilet, { through: "Favorite" });
 Toilet.belongsToMany(User, { through: "Favorite" });

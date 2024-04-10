@@ -26,8 +26,20 @@ async function getAllUsers(criterias = {}) {
 	return await User.findAll({ where });
 }
 
-async function createFavorite(favorite) {
-	return await User.addFavorite(favorite);
+async function createFavorite({ userId, toiletsId }) {
+	const user = await getUsersById(userId);
+	// console.log(toiletsId);
+	return await user.addToilets(toiletsId);
 }
 
-module.exports = { createUser, getUsersById, getAllUsers, createFavorite };
+async function createNotice(notice) {
+	return await User.addNotice(notice);
+}
+
+module.exports = {
+	createUser,
+	getUsersById,
+	getAllUsers,
+	createFavorite,
+	createNotice,
+};
