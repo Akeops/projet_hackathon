@@ -24,7 +24,7 @@ const NavBar = () => {
                             </div>
                             
                             <div className="dropDownBottom">
-                                <a href="#" className="elementDropDown">Nous contactez</a>
+                                <a href="#" className="elementDropDown">Nous contacter</a>
                                 <a href="#" className="elementDropDown">Aides</a>
                                 <a href="#" className="elementDropDown">Mentions Légales</a>
                             </div>
