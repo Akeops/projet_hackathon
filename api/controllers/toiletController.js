@@ -2,7 +2,6 @@ const toiletService = require("../services/toiletService");
 
 async function createToilet(req, res) {
 	try {
-		console.log(req.body);
 		const toilet = await toiletService.createToilet(req.body);
 		console.log("test" + req.body);
 		res.json(toilet);
