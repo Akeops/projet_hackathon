@@ -22,7 +22,7 @@ const Toilet = db.define(
 			allowNull: true,
 		},
 		disableAcs: {
-			type: DataTypes.STRING,
+			type: DataTypes.BOOLEAN,
 			allowNull: true,
 		},
 		babyAccess: {

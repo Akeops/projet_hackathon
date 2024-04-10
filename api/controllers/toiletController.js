@@ -3,6 +3,7 @@ const toiletService = require("../services/toiletService");
 async function createToilet(req, res) {
 	try {
 		const toilet = await toiletService.createToilet(req.body);
+		console.log("test" + req.body);
 		res.json(toilet);
 	} catch (err) {
 		res.status(500).json({ message: err.message });
