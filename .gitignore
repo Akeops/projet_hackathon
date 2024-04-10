@@ -1,5 +1,9 @@
-node_modules# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+#database
+database.sqlite3
+
+database.sqlite3
 # dependencies
 /node_modules
 /.pnp
@@ -21,3 +25,5 @@ node_modules# See https://help.github.com/articles/ignoring-files/ for more abou
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.vscode
