@@ -26,6 +26,8 @@ async function getAllUsers(criterias = {}) {
 	return await User.findAll({ where });
 }
 
+//Hello lol
+
 async function addFavoriteToUser({ userId, toiletsId }) {
 	const user = await getUsersById(userId);
 	return await user.addToilets(toiletsId);
@@ -34,11 +36,15 @@ async function addFavoriteToUser({ userId, toiletsId }) {
 async function addNoticeToUser({ userId, toiletsId, comment, note }) {
 	const user = await getUsersById(userId);
 	console.log(comment);
-	return await user.addNotice_relation(toiletsId, {
-		comment: comment,
-		note: note,
-	});
+	console.log(toiletsId);
+	// const notices = await user.addNotice_relation(
+	// 	toiletsId.map((id) => ({ id })),
+	// 	{ through: { comment, note } }
+	// );
+	// return notices;
+	return await user.addNotice_relation({toiletsId, comment, note})
 }
+
 
 module.exports = {
 	createUser,

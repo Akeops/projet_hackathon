@@ -57,6 +57,7 @@ async function addNoticeToUser(req, res) {
 	try {
 		const userId = req.params.id;
 		const { toiletsId, comment, note } = req.body;
+		console.log({ toiletsId, comment, note });
 		const notice = await userService.addNoticeToUser({
 			userId,
 			toiletsId,
