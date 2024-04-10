@@ -8,7 +8,7 @@ const { User } = require("./userModel");
 // Associations
 
 const Notice = db.define(
-	"notice",
+	"Notice",
 	{
 		comment: {
 			type: DataTypes.TEXT,
@@ -34,4 +34,4 @@ Toilet.belongsToMany(User, {
 User.belongsToMany(Toilet, { through: "Favorite" });
 Toilet.belongsToMany(User, { through: "Favorite" });
 
-module.exports = { User, Toilet, Comment: Notice };
+module.exports = { User, Toilet, Notice };
