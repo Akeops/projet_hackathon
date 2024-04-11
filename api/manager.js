@@ -21,37 +21,37 @@ app.use(function (req, res, next) {
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/toilets", toiletRouter);
 
-const { readFile } = require("node:fs/promises");
+// const { readFile } = require("node:fs/promises");
 
-let data;
+// let data;
 
-async function insertData() {
-  let tempData = await readFile("./sanisettesparis.json", {
-    encoding: "utf8",
-  });
-  data = JSON.parse(tempData);
-  return data;
-}
+// async function insertData() {
+//   let tempData = await readFile("./sanisettesparis.json", {
+//     encoding: "utf8",
+//   });
+//   data = JSON.parse(tempData);
+//   return data;
+// }
 
-const toiletService = require("./services/toiletService");
+// const toiletService = require("./services/toiletService");
 // const userService = require("./services/userService");
 
 // db.sync({force: true}).then(async () => {
 db.sync().then(async () => {
-	insertData().then((data) => {
-	  data.forEach((element) => {
-	    toiletService.createToilet({
-	      type: element.type,
-	      adress: element.adresse,
-	      borough: element.arrondissement,
-	      hours: element.horaire,
-	      disableAcs: element.acces_pmr,
-	      babyAccess: element.relais_bebe,
-	      geoPointLon: element.geo_point_2d.lon,
-	      geoPointLat: element.geo_point_2d.lat,
-	    });
-	  });
-	});
+	// insertData().then((data) => {
+	//   data.forEach((element) => {
+	//     toiletService.createToilet({
+	//       type: element.type,
+	//       adress: element.adresse,
+	//       borough: element.arrondissement,
+	//       hours: element.horaire,
+	//       disableAcs: element.acces_pmr,
+	//       babyAccess: element.relais_bebe,
+	//       geoPointLon: element.geo_point_2d.lon,
+	//       geoPointLat: element.geo_point_2d.lat,
+	//     });
+	//   });
+	// });
 	// userService.createUser({
 	// 	nickname: "John",
 	// 	email: "email@mail.com",
