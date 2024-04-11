@@ -1,7 +1,7 @@
-.App {
+/* .App {
   text-align: center;
   height: 100vh;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -16,7 +16,6 @@
 
 .App-header {
   background-color: #1654d0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +32,12 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.childMain {
+  margin-top: 40px;
 }

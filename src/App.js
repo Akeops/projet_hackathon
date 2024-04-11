@@ -1,15 +1,45 @@
-// import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBarConnecte";
 import MapComponent from "./components/MapComponent";
+import DirectoryToiletPage from "./pages/DirectoryToilet.tsx";
+
+import HelpPage from "./pages/Help.tsx";
+import LegalMention from "./pages/LegalMention.tsx";
+import Contact from "./pages/Contact.tsx";
+
+import "./App.css";
+
 
 function App() {
 	return (
 		<div className="App">
-			<main>
-				<NavBar />
-				<MapComponent />
-			</main>
+			<Router>
+				<NavBar /> {/* NavBar est contenu dans le Router */}
+				<main className="childMain">
+					<Routes>
+						<Route
+							path="/annuaire"
+							element={<DirectoryToiletPage />}
+						/>
+						<Route
+							path="/aide"
+							element={<HelpPage />}
+						/>
+						<Route
+							path="/mentionLegale"
+							element={<LegalMention />}
+						/>
+						<Route
+							path="/contact"
+							element={<Contact />}
+						/>
+						<Route path="/" element={<MapComponent />} />
+					</Routes>
+				</main>
+			</Router>
+			{/* <ToiletCard /> */}
+
 		</div>
 	);
 }
