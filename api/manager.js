@@ -12,9 +12,9 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/toilets", toiletRouter);
 
 // const { readFile } = require("node:fs/promises");
-//
+
 // let data;
-//
+
 // async function insertData() {
 //   let tempData = await readFile("./sanisettesparis.json", {
 //     encoding: "utf8",
@@ -22,7 +22,7 @@ app.use("/api/v1/toilets", toiletRouter);
 //   data = JSON.parse(tempData);
 //   return data;
 // }
-//
+
 // const toiletService = require("./services/toiletService");
 // const userService = require("./services/userService");
 
