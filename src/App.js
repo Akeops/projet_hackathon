@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBarConnecte";
+
 import MapComponent from "./components/MapComponent";
 import DirectoryToiletPage from "./pages/DirectoryToilet.tsx";
 
@@ -19,7 +20,6 @@ function App() {
 					</Routes>
 				</main>
 			</Router>
-			{/* <ToiletCard /> */}
 		</div>
 	);
 }
