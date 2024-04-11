@@ -8,4 +8,4 @@ const DirectoryToiletPage = () => {
     )
 }
 
-export default DirectoryToiletPage
+export default DirectoryToiletPage;
