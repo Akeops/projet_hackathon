@@ -3,16 +3,20 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBarConnecte";
 import MapComponent from "./components/MapComponent";
 import DirectoryToiletPage from "./pages/DirectoryToilet.tsx";
+
 import HelpPage from "./pages/Help.tsx";
 import LegalMention from "./pages/LegalMention.tsx";
 import Contact from "./pages/Contact.tsx";
+
+import "./App.css";
+
 
 function App() {
 	return (
 		<div className="App">
 			<Router>
 				<NavBar /> {/* NavBar est contenu dans le Router */}
-				<main>
+				<main className="childMain">
 					<Routes>
 						<Route
 							path="/annuaire"
