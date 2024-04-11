@@ -1,5 +1,5 @@
 import React from 'react';
-import UserPage from './components/UserPage';
+import MapComponent from './components/MapComponent';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         
       </header>
       <main>
-        <UserPage />
+        <MapComponent />
       </main>
     </div>
   );
