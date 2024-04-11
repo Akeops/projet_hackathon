@@ -60,15 +60,24 @@ const NavBar = () => {
 							</div>
 
 							<div className="dropDownBottom">
-								<div className="divLink elementDropDown">
-									<p>Nous contacter</p>
-								</div>
-								<div className="divLink elementDropDown">
+								<Link 
+									to="/contact" 
+									className="divLink elementDropDown">
+										
+									Nous contacter
+								</Link>
+								<Link 
+                                    to="/aide" 
+                                    className="divLink elementDropDown">
+
 									Aides
-								</div>
-								<div className="elementDropDown">
+								</Link>
+								<Link 
+                                    to="/mentionLegale"
+                                    className="elementDropDown">
+
 									Mentions Légales
-								</div>
+								</Link>
 							</div>
 						</div>
 					)}
@@ -109,7 +118,7 @@ const NavBar = () => {
 						<img
 							src="../images/icon-profil.png"
 							alt="profil"
-							className="img-menu"
+							className="img-profil"
 						/>
 					</div>
 					{isProfileMenuOpen && (

@@ -37,8 +37,8 @@
 }
 
 .img-profil {
-  width: 2em;
-  height: 2em;
+  width: 3em;
+  height: 3em;
   margin-right: 50px;
   margin-top: 15px;
 }
@@ -111,7 +111,7 @@ h1 {
 
 .btn {
   padding: 1.3em 3em;
-  font-size: 10px;
+  font-size: 5px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   text-decoration: none;
@@ -139,6 +139,19 @@ h1 {
 
 /*////////////////////////////Menu nav bar//////////////////////////*/
 
+.elementDropDown {
+  text-decoration: none;
+  color: #007bff;
+  display: block;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+}
+
 p {
   color: #000;
 }
@@ -154,8 +167,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* Cela s'assure que le contenu supérieur est en haut et le contenu inférieur est en bas */
-  height: 92vh;
+  height: 87vh;
 }
 
 .dropdown-menu-right {
@@ -168,7 +180,7 @@ p {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  /*justify-content: space-between; !* Cela s'assure que le contenu supérieur est en haut et le contenu inférieur est en bas *!*/
+  /*justify-content: space-between;
   /*height: 86vh;*/
 }
 
@@ -182,7 +194,7 @@ p {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  /*justify-content: space-between; !* Cela s'assure que le contenu supérieur est en haut et le contenu inférieur est en bas *!*/
+  /*justify-content: space-between;
   /*height: 86vh;*/
 }
 
@@ -211,6 +223,4 @@ p {
   position: absolute;
   right: 0;
   top: 100%;
-  /* Ajustez selon le besoin pour que le menu s'affiche en dessous du bouton */
-  /* Autres styles nécessaires */
 }
