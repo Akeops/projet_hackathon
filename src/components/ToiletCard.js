@@ -14,12 +14,10 @@ const ToiletCard = ({
 				<strong></strong> {type}
 			</h2>
 			<p className="card-info">
-				<strong>Adresse:</strong> {address}
-				{borough}
+				<strong>Adresse:</strong> {address}, {borough}
 			</p>
 			<p className="card-info">
-				<strong>Horaires d'ouverture:</strong>
-				{hours}
+				<strong>Horaires d'ouverture:</strong> {hours}
 			</p>
 			<p className="card-info">
 				<strong>Accès handicapé:</strong> {disableAcs ? "Oui" : "Non"}
