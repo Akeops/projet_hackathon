@@ -1,9 +1,10 @@
 .map-container {
+  position: relative;
   height: 100vh;
 }
 
 .marker {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: 1px solid blue;
   color: white;
   padding: 20px;
@@ -13,4 +14,18 @@
   font-size: 16px;
   margin: 4px 2px;
   border-radius: 50%;
+}
+
+.button-style {
+  background-color: #4caf50; /* Couleur de fond */
+  border: none; /* Pas de bordure */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement interne */
+  text-align: center; /* Alignement du texte */
+  text-decoration: none; /* Pas de décoration de texte */
+  display: inline-block; /* Type d'affichage */
+  font-size: 16px; /* Taille de police */
+  margin: 4px 2px; /* Marge externe */
+  cursor: pointer; /* Style du curseur */
+  border-radius: 5px; /* Bordures arrondies */
 }
