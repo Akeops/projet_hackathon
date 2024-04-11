@@ -1,13 +1,14 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/NavBarConnecte";
-import MapComponent from './components/MapComponent';
+import MapComponent from "./components/MapComponent";
+import UserPage from "./components/UserPage";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <NavBar />
+        <NavBar />
       </header>
       <main>
         <MapComponent />

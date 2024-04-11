@@ -1,0 +1,15 @@
+.artboard {
+  width: 375px; /* Largeur de l'artboard */
+  height: 667px; /* Hauteur de l'artboard */
+  background-color: #f0f0f0; /* Couleur de fond de l'artboard */
+  color: #333; /* Couleur du texte */
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.1),
+    0 -4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  display: flex; /* Utilisation de Flexbox pour centrer le texte */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  font-family: Arial, sans-serif; /* Police de caractères */
+  font-size: 20px; /* Taille de la police */
+}
