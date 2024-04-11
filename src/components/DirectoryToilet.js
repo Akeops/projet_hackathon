@@ -14,6 +14,7 @@ function DirectoryToilet() {
 				);
 				const data = await response.json();
 				setToiletData(data);
+				// console.log(toiletData);
 			} catch (error) {
 				console.error("Error fetching toilet data:", error);
 			}
@@ -21,6 +22,8 @@ function DirectoryToilet() {
 
 		getDataToilet();
 	}, []);
+
+	// console.log(toiletData);
 
 	const handleSearchChange = (event) => {
 		setSearchQuery(event.target.value);
