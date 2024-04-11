@@ -9,38 +9,29 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  return (
-    <nav className="nav">
-      <div className="navSec1">
-        <div>
-          <a href="#" onClick={toggleMenu}>
-            <img src="./images/menu.png" alt="menu" className="img-menu" />
-          </a>
-          {isMenuOpen && (
-            <div className="dropdown-menu">
-              <div className="dropDownTop">
-                <a href="#" className="elementDropDown">
-                  Profil
-                </a>
-                <a href="#" className="elementDropDown">
-                  Toilettes de Paris
-                </a>
-              </div>
+    return (
+        <nav className='nav'>
+            <div className='navSec1'>
+                <div>
+                    <a href="#" onClick={toggleMenu}>
+                        <img src="./images/menu.png" alt="menu" className="img-menu" />
+                    </a>
+                    {isMenuOpen && (
+                        <div className="dropdown-menu">
+                            <div className="dropDownTop">
+                                <a href="#" className="elementDropDown">Profil</a>
+                                <a href="#" className="elementDropDown">Toilettes de Paris</a>
+                            </div>
+                            
+                            <div className="dropDownBottom">
+                                <a href="#" className="elementDropDown">Nous contactez</a>
+                                <a href="#" className="elementDropDown">Aides</a>
+                                <a href="#" className="elementDropDown">Mentions Légales</a>
+                            </div>
 
-              <div className="dropDownBottom">
-                <a href="#" className="elementDropDown">
-                  Nous contactez
-                </a>
-                <a href="#" className="elementDropDown">
-                  Aides
-                </a>
-                <a href="#" className="elementDropDown">
-                  Mentions Légales
-                </a>
-              </div>
-            </div>
-          )}
-        </div>
+                        </div>
+                    )}
+                </div>
 
         <div class="group">
           <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">

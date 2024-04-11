@@ -34,26 +34,27 @@
 }
 
 .img-menu {
-  width: 2em;
-  height: 2em;
-  padding-top: 1.3em;
+  width: 1.5em;
+  height: 1.5em;
+  padding-top: 1em;
 }
 
 .img-profil {
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
   margin-right: 50px;
   margin-top: 15px;
 }
 
 .img-logo {
-  width: 150px;
-  height: 100px;
+  width: 2em;
+  height: 1em;
   padding: 0%;
 }
 
 h1 {
   color: #000;
+  font-size: 1.2em;
 }
 
 /*//////////////////////////////////Input rechercher////////////////////////////////////////////*/
@@ -63,11 +64,11 @@ h1 {
   line-height: 28px;
   align-items: center;
   position: relative;
-  max-width: 300px;
+  max-width: 250px;
 }
 
 .input {
-  height: 40px;
+  height: 30px;
   line-height: 28px;
   padding: 0 1rem;
   width: 100%;
@@ -84,7 +85,7 @@ h1 {
 
 .input::placeholder {
   color: #777;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .icon {
@@ -93,6 +94,7 @@ h1 {
   fill: #777;
   width: 1rem;
   height: 1rem;
+  padding-top: 0.2em;
 }
 
 
@@ -108,11 +110,11 @@ h1 {
 
 .btn {
   padding: 1.3em 3em;
-  font-size: 15px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   color: #000;
   background-color: #fff;
   border: none;
@@ -146,6 +148,8 @@ h1 {
   z-index: 1000; 
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Cela s'assure que le contenu supérieur est en haut et le contenu inférieur est en bas */
+  height: 86vh;
 }
 
 .dropdown-menu button {
