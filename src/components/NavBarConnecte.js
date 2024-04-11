@@ -50,10 +50,16 @@ const NavBar = () => {
 								<div className="divLink">
 									<p>Profil</p>
 								</div>
+								<Link 
+									to="/"
+									className="elementDropDown">
+
+									Accueil
+								</Link>
 								<Link
 									to="/annuaire"
 									className="elementDropDown"
-									onClick={toggleMenu} // Ferme le menu lorsque l'utilisateur clique sur un lien
+									onClick={toggleMenu}
 								>
 									Toilettes de Paris
 								</Link>
@@ -98,22 +104,21 @@ const NavBar = () => {
 						className="input"></input>
 				</div>
 
-				<div>
-					<h1>Pause Parisienne</h1>
-					{/* <a href="#" >   
-                        <img src="./images/logo.png" alt="Logo" className="img-logo"/>
-                    </a> */}
-				</div>
+				<Link 
+					to="/"
+					className="Titre-h1">
+
+					Pause Parisienne
+				</Link>
 			</div>
 
 			<div className="navSec2">
 				<div className="navSec2-1">
-					<div className="divLink btn">
-						<p>Vos Favoris</p>
+					<div className="">
+						
 					</div>
 				</div>
 				<div className="navSec2">
-					{/* Bouton pour ouvrir le menu du profil */}
 					<div className="divLink" onClick={toggleProfileMenu}>
 						<img
 							src="../images/icon-profil.png"
@@ -123,7 +128,6 @@ const NavBar = () => {
 					</div>
 					{isProfileMenuOpen && (
 						<div className="dropdown-menu-right" ref={dropdownRef}>
-							{/* Éléments du menu du profil */}
 							<UserPage />
 						</div>
 					)}

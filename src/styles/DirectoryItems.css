@@ -6,9 +6,7 @@
 
 .toiletCard {
     width: calc(25% - 10px);
-    /* Largeur de 25% avec un espace entre chaque carte */
     margin-bottom: 20px;
-    /* Marge inférieure pour l'espace entre les lignes */
 }
 
 .inputDirectory {

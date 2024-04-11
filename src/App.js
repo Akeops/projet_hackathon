@@ -15,7 +15,7 @@ function App() {
 	return (
 		<div className="App">
 			<Router>
-				<NavBar /> {/* NavBar est contenu dans le Router */}
+				<NavBar />
 				<main className="childMain">
 					<Routes>
 						<Route
