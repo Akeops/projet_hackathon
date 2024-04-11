@@ -1,7 +1,7 @@
 import React from "react";
 import UserPage from "./components/UserPage";
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import NavBar from "./components/NavBarConnecte";
 
 function App() {
@@ -10,10 +10,7 @@ function App() {
       <header className="App-header">
         <NavBar />
       </header>
-      <main>
-        <UserPage />
-      </main>
-      
+      <main></main>
     </div>
   );
 }
