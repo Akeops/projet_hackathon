@@ -1,21 +1,18 @@
 .help-page {
-    font-family: Arial, sans-serif;
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    background-color: azure;
+    text-align: left;
   }
   
   h1 {
-    color: #333;
+    color: #a1d69d;
     text-align: center;
-    margin-bottom: 30px;
   }
   
   h2 {
-    color: #0275d8;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    color: #555;
   }
   
   article {
@@ -28,8 +25,8 @@
   }
   
   p {
-    line-height: 1.6;
-    color: #666;
+    margin-top: 10px;
+    font-size: 11px;
   }
   
   section {
