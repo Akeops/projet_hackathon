@@ -1,7 +1,8 @@
-// import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/NavBarConnecte";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MapComponent from "./components/MapComponent";
+import DirectoryToiletPage from "./pages/DirectoryToilet.tsx";
 
 function App() {
 	return (
@@ -10,8 +11,18 @@ function App() {
 				<NavBar />
 			</header>
 			<main>
-				<MapComponent />
+				<Router>
+					<Routes>
+						<Route
+							path="/annuaire"
+							element={<DirectoryToiletPage />}
+						/>
+
+						<Route path="/" exact element={<MapComponent />} />
+					</Routes>
+				</Router>
 			</main>
+			{/* <ToiletCard /> */}
 		</div>
 	);
 }

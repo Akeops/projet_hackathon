@@ -18,9 +18,9 @@
 //                         </svg>
 //                     <input placeholder="Search" type="search" className="input"></input>
 //                 </div>
-                
+
 //                 <div>
-//                     {/* <a href="#" >   
+//                     {/* <a href="#" >
 //                         <img src="./images/logo.png" alt="Logo" className="img-logo"/>
 //                     </a> */}
 //                 </div>
@@ -39,7 +39,5 @@
 //         </nav>
 //     )
 // }
-
-
 
 // export default NavBar;

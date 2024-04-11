@@ -1,35 +1,34 @@
 /*//////////////////////////////////////////////////////////////////////////////*/
 
 .nav {
-    display: flex;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+  display: flex;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .navSec1 {
-    display: flex;
-    gap: 2em;
-    padding-left: 1.875em;
+  display: flex;
+  gap: 2em;
+  padding-left: 1.875em;
 }
 
 .navSec2 {
-    display: flex;
-    align-items: center;
-    gap: 2em;
+  display: flex;
+  align-items: center;
+  gap: 2em;
 
 }
 
-.navSec2-1 {
-}
+.navSec2-1 {}
 
-.btn{
+.btn {
   align-items: center;
 }
 
@@ -55,6 +54,11 @@
 h1 {
   color: #000;
   font-size: 1.2em;
+}
+
+.divLink {
+  cursor: pointer;
+  color: #000;
 }
 
 /*//////////////////////////////////Input rechercher////////////////////////////////////////////*/
@@ -138,17 +142,22 @@ h1 {
 
 /*////////////////////////////Menu nav bar//////////////////////////*/
 
+p {
+  color: #000;
+}
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
   width: 250px;
-  background-color: white;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1000; 
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Cela s'assure que le contenu supérieur est en haut et le contenu inférieur est en bas */
+  justify-content: space-between;
+  /* Cela s'assure que le contenu supérieur est en haut et le contenu inférieur est en bas */
   height: 92vh;
 }
 
@@ -166,7 +175,8 @@ h1 {
   background-color: #f0f0f0;
 }
 
-.dropDownTop, .dropDownBottom{
+.dropDownTop,
+.dropDownBottom {
   display: flex;
   flex-direction: column;
 }
