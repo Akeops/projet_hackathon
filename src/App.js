@@ -1,27 +1,24 @@
-import "./App.css";
-import NavBar from "./components/NavBarConnecte";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBarConnecte";
 import MapComponent from "./components/MapComponent";
 import DirectoryToiletPage from "./pages/DirectoryToilet.tsx";
 
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				<NavBar />
-			</header>
-			<main>
-				<Router>
+			<Router>
+				<NavBar /> {/* NavBar est contenu dans le Router */}
+				<main>
 					<Routes>
 						<Route
 							path="/annuaire"
 							element={<DirectoryToiletPage />}
 						/>
-
-						<Route path="/" exact element={<MapComponent />} />
+						<Route path="/" element={<MapComponent />} />
 					</Routes>
-				</Router>
-			</main>
+				</main>
+			</Router>
 			{/* <ToiletCard /> */}
 		</div>
 	);
