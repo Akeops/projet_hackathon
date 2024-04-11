@@ -77,11 +77,11 @@ h1 {
   outline: none;
   background-color: #d9e8d8;
   color: #0d0c22;
-  box-shadow:
-    0 0 5px #c1d9bf,
-    0 0 0 10px #f5f5f5eb;
-  transition: 0.3s ease;
-  font-size: 25px;
+
+  box-shadow: 0 0 5px #C1D9BF, 0 0 0 10px #f5f5f5eb;
+  transition: .3s ease;
+  font-size: 15px;
+
 }
 
 .input::placeholder {
@@ -141,7 +141,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Cela s'assure que le contenu supérieur est en haut et le contenu inférieur est en bas */
-  height: 86vh;
+  height: 92vh;
 }
 
 .dropdown-menu-right {
