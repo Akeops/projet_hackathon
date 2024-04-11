@@ -58,7 +58,6 @@ const NavBar = () => {
         </div>
         <div>
           <a href="#"></a>
-          <UserPage />
         </div>
       </div>
     </nav>
