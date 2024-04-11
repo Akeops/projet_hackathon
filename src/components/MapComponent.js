@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import '../styles/map.css';
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3lsdmFpbmdhbHRpZXIiLCJhIjoiY2tsZ3JoZ3kyMWV3OTJ3cDdrcjM0azh0eiJ9.zH81EkDqnNnXFigXe1f7PQ';
 
@@ -11,10 +12,10 @@ export default function App() {
   const [zoom, setZoom] = useState(12);
 
   useEffect(() => {
-    if (map.current) return; // initialize map only once
+    if (map.current) return; 
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/satellite-v9',
+      style: 'mapbox://styles/mapbox/streets-v12',
       center: [lng, lat],
       zoom: zoom
     });
@@ -28,9 +29,6 @@ export default function App() {
 
   return (
     <div>
-      <div className="sidebar">
-        Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
-      </div>
       <div ref={mapContainer} className="map-container" />
     </div>
   );
