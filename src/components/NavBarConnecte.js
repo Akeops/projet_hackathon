@@ -47,6 +47,9 @@ const NavBar = () => {
 					{isMenuOpen && (
 						<div className="dropdown-menu" ref={dropdownRef}>
 							<div className="dropDownTop">
+								<div className="divLink">
+									<p>Menu</p>
+								</div>
 								<Link 
 									to="/"
 									className="elementDropDown">
