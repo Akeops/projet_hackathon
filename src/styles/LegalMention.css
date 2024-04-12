@@ -1,25 +1,22 @@
 .legal-mentions {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    color: #333;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .legal-mentions h1 {
-    color: #0275d8;
-    text-align: center;
-  }
-  
-  .legal-mentions h2 {
-    margin-top: 30px;
-    color: #555;
-  }
-  
-  .legal-mentions p {
-    margin-top: 10px;
-  }
-  
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  color: #333;
+  text-align: left;
+}
+
+.legal-mentions h1 {
+  color: #a1d69d;
+  text-align: center;
+}
+
+.legal-mentions h2 {
+  margin-top: 30px;
+  color: #555;
+}
+
+.legal-mentions p {
+  margin-top: 10px;
+  font-size: 11px;
+}
