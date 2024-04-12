@@ -54,7 +54,6 @@ const App = () => {
 
     map.on("load", addMarkers); // Ajoute des marqueurs une fois la carte chargée.
 
-    //return () => map.remove(); // Nettoyage lors du démontage du composant.
   }, [toiletData]); // Réexécute cet effet si `toiletData` change.
 
   return <div ref={mapContainerRef} className="map-container"></div>;
