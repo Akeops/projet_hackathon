@@ -47,9 +47,6 @@ const NavBar = () => {
 					{isMenuOpen && (
 						<div className="dropdown-menu" ref={dropdownRef}>
 							<div className="dropDownTop">
-								<div className="divLink">
-									<p>Profil</p>
-								</div>
 								<Link 
 									to="/"
 									className="elementDropDown">
@@ -68,19 +65,19 @@ const NavBar = () => {
 							<div className="dropDownBottom">
 								<Link 
 									to="/contact" 
-									className="divLink elementDropDown">
+									className="elementDropDown2">
 										
 									Nous contacter
 								</Link>
 								<Link 
                                     to="/aide" 
-                                    className="divLink elementDropDown">
+                                    className="elementDropDown2">
 
 									Aides
 								</Link>
 								<Link 
                                     to="/mentionLegale"
-                                    className="elementDropDown">
+                                    className="elementDropDown2">
 
 									Mentions Légales
 								</Link>
