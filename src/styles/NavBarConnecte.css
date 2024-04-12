@@ -24,7 +24,8 @@
   gap: 2em;
 }
 
-.navSec2-1 {}
+.navSec2-1 {
+}
 
 .btn {
   align-items: center;
@@ -88,8 +89,10 @@ h1 {
   background-color: #d9e8d8;
   color: #0d0c22;
 
-  box-shadow: 0 0 5px #C1D9BF, 0 0 0 10px #f5f5f5eb;
-  transition: .3s ease;
+  box-shadow:
+    0 0 5px #c1d9bf,
+    0 0 0 10px #f5f5f5eb;
+  transition: 0.3s ease;
   font-size: 15px;
 
   box-shadow:
@@ -97,7 +100,6 @@ h1 {
     0 0 0 10px #f5f5f5eb;
   transition: 0.3s ease;
   font-size: 15px;
-
 }
 
 .input::placeholder {
@@ -126,7 +128,7 @@ h1 {
   margin: 5px 0;
   border-radius: 5px;
   background-color: white;
-  width: calc(100% - 20px);
+  width: calc(100% - 0);
   box-sizing: border-box;
 }
 
