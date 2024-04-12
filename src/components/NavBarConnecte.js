@@ -128,6 +128,19 @@ const NavBar = () => {
 					</div>
 					{isProfileMenuOpen && (
 						<div className="dropdown-menu-right" ref={dropdownRef}>
+							{/* Éléments du menu du profil */}
+							<Link 
+                                    to="/inscription"
+                                    className="elementDropDown">
+
+									Inscription
+							</Link>
+							<Link 
+                                    to="/connection"
+                                    className="elementDropDown">
+
+									Connection
+							</Link>
 							<UserPage />
 						</div>
 					)}
