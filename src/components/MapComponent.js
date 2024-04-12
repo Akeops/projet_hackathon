@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import mapboxgl from "mapbox-gl";
-import "../styles/map.css"; // Assurez-vous que ce chemin est correct.
+import "../styles/map.css";
 
 mapboxgl.accessToken =
 	"pk.eyJ1Ijoic3lsdmFpbmdhbHRpZXIiLCJhIjoiY2tsZ3JoZ3kyMWV3OTJ3cDdrcjM0azh0eiJ9.zH81EkDqnNnXFigXe1f7PQ";
@@ -13,7 +13,6 @@ const App = () => {
 	const zoom = 12;
 	const [toiletData, setToiletData] = useState([]);
 
-	// Fonction pour récupérer les données des toilettes depuis une API.
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
@@ -34,10 +33,8 @@ const App = () => {
 		fetchData();
 	}, []);
 
-	// Initialisation de la carte Mapbox et ajout des marqueurs une fois les données chargées.
 	useEffect(() => {
-		if (!mapContainerRef.current) return; // Assurez-vous que le conteneur existe.
-		// Création de l'instance de la carte.
+		if (!mapContainerRef.current) return;
 		const map = new mapboxgl.Map({
 			container: mapContainerRef.current,
 			style: "mapbox://styles/mapbox/streets-v11",
@@ -45,19 +42,21 @@ const App = () => {
 			zoom: zoom,
 		});
 
-		// Fonction pour ajouter des marqueurs à la carte.
 		const addMarkers = () => {
 			toiletData.forEach((toilet) => {
+				const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+					`${toilet.adress}, ${toilet.borough}`
+				);
+
 				new mapboxgl.Marker()
 					.setLngLat([toilet.geoPointLon, toilet.geoPointLat])
-					.addTo(map);
+					.addTo(map)
+					.setPopup(popup);
 			});
 		};
 
-		map.on("load", addMarkers); // Ajoute des marqueurs une fois la carte chargée.
-
-		// return () => map.remove(); // Nettoyage lors du démontage du composant.
-	}, [toiletData]); // Réexécute cet effet si `toiletData` change.
+		map.on("load", addMarkers);
+	}, [toiletData]);
 
 	return <div ref={mapContainerRef} className="map-container"></div>;
 };
