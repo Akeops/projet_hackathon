@@ -7,6 +7,8 @@ import DirectoryToiletPage from "./pages/DirectoryToilet.tsx";
 import HelpPage from "./pages/Help.tsx";
 import LegalMention from "./pages/LegalMention.tsx";
 import Contact from "./pages/Contact.tsx";
+import RegistrationForm from "./pages/RegistrationForm.tsx";
+import ConnectionForm from "./pages/Connection.tsx";
 
 import "./App.css";
 
@@ -33,6 +35,14 @@ function App() {
 						<Route
 							path="/contact"
 							element={<Contact />}
+						/>
+						<Route
+							path="/inscription"
+							element={<RegistrationForm />}
+						/>
+						<Route
+							path="/connection"
+							element={<ConnectionForm />}
 						/>
 						<Route path="/" element={<MapComponent />} />
 					</Routes>
